@@ -17,9 +17,14 @@ var schema = buildSchema(`
         gain: Float!
     }
 
+    type RemovableProduct{
+        product: Product
+        removed: Boolean! 
+    }
+
     type Mutation{
         createProduct(code: Int!, description: String!, price: Float!, cost: Float!, stock: Float!): Product!
-        remoceProduct(code: Int!): Boolean!
+        removeProduct(code: Int!): RemovableProduct!
     }
 
     type Query {
