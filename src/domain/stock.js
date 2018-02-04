@@ -1,8 +1,7 @@
 const emptyExchanger = Promise.resolve(1)
 
 const stock = (products, code, exchanger = emptyExchanger) => {
-    const stock = products
-    .byCode(code)
+    const stock = products(code)
     .then(products => {
         return products.reduce((stock, product) => {
             const price = stock.price + product.price
@@ -23,8 +22,6 @@ const stock = (products, code, exchanger = emptyExchanger) => {
     return Promise
     .all([stock,exchanger])
     .then(([{price,cost,gain},rate])=>{
-        console.log(cost)
-        console.log(rate)
         return {
             price : price*rate,
             cost : cost*rate,
