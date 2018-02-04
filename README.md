@@ -4,7 +4,7 @@ Simple Stock API in GraphQl and Node.js
 
 ## Instalation
 ```bash
-$ export TMONGODB_CONEST=<YOUR MONG DB CONNECTION>
+$ export MONGODB_CONEST=<YOUR MONG DB CONNECTION>
 $ git clone https://github.com/mateushenriquebrum/Stock-GraphQL
 $ cd GraphQLStoreApi
 $ npm install

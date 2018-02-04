@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/store');
+mongoose.connect(process.env.MONGODB_CON || 'mongodb://localhost/store');
 
 const Product = mongoose.model('Product', {
     code: Number,
